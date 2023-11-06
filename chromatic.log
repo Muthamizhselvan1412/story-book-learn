@@ -1,0 +1,107 @@
+
+Chromatic CLI v7.6.0
+https://www.chromatic.com/docs/cli
+
+Authenticating with Chromatic
+    → Connecting to https://index.chromatic.com
+Authenticated with Chromatic
+    → Using project token '****************1ce6'
+Retrieving git information
+✖ Found only one commit
+This typically means you have ran into one of the following scenarios:
+- You've checked out a shallow copy of the Git repository, which some CI systems do by default.
+  In order for Chromatic to correctly determine baseline commits, we need access to the full Git history graph.
+  Refer to your CI provider's documentation for details.
+- You've only made a single commit so far.  
+  Please make at least one additional commit in order for Chromatic to be able to detect what's changed.
+Failed to retrieve slug {"shortMessage":"Command failed with exit code 1: git config --get remote.origin.url","command":"git config --get remote.origin.url","escapedCommand":"git config --get remote.origin.url","exitCode":1,"stdout":"","stderr":"","cwd":"/var/www/html/story-book-learn","all":"","failed":true,"timedOut":false,"isCanceled":false,"killed":false}
+Retrieved git information
+    → Commit 'f57428a' on branch 'master'; no ancestor found
+Collecting Storybook metadata
+Collected Storybook metadata
+    → Storybook 7.5.2 for React; using the @storybook/react-webpack5 builder (7.5.2); supported addons found: Links, Essentials, Interactions, A11y
+Initializing build
+Initialized build
+    → Build 1 initialized
+Building your Storybook
+    → Running command: npm run build-storybook -- --output-dir /tmp/chromatic--32460-wtDjBTBN5aWl
+Storybook built in 22 seconds
+    → View build log at /var/www/html/story-book-learn/build-storybook.log
+Publish your built Storybook
+    → Validating Storybook files
+Publishing your built Storybook
+    → Retrieving target location
+    → Starting publish
+    → [                    ] 0%
+    → [=                   ] 7%
+    → [==                  ] 9%
+    → [==                  ] 12%
+    → [===                 ] 14%
+    → [====                ] 21%
+    → [=====               ] 24%
+    → [=====               ] 26%
+    → [=====               ] 27%
+    → [=======             ] 33%
+    → [=======             ] 35%
+    → [=======             ] 37%
+    → [========            ] 39%
+    → [========            ] 41%
+    → [=========           ] 43%
+    → [=========           ] 44%
+    → [==========          ] 48%
+    → [==========          ] 51%
+    → [===========         ] 54%
+    → [===========         ] 55%
+    → [===========         ] 56%
+    → [===========         ] 57%
+    → [============        ] 59%
+    → [============        ] 60%
+    → [============        ] 62%
+    → [=============       ] 63%
+    → [=============       ] 64%
+    → [=============       ] 65%
+    → [=============       ] 66%
+    → [=============       ] 67%
+    → [==============      ] 68%
+    → [==============      ] 70%
+    → [==============      ] 72%
+    → [===============     ] 73%
+    → [===============     ] 74%
+    → [===============     ] 75%
+    → [===============     ] 76%
+    → [================    ] 78%
+    → [================    ] 81%
+    → [=================   ] 83%
+    → [=================   ] 84%
+    → [=================   ] 85%
+    → [=================   ] 87%
+    → [==================  ] 90%
+    → [==================  ] 92%
+    → [=================== ] 94%
+    → [=================== ] 95%
+    → [=================== ] 96%
+    → [=================== ] 97%
+    → [====================] 98%
+    → [====================] 99%
+    → [====================] 100%
+Publish complete in 30 seconds
+    → View your Storybook at https://6548cf222cb82a0237bc844b-oxlmmulhnq.chromatic.com
+Verifying your Storybook
+    → This may take a few minutes
+Started build 1
+    → Continue setup at https://www.chromatic.com/setup?appId=6548cf222cb82a0237bc844b
+Running 18 tests
+    → This may take a few minutes
+    → [=                   ] 1/18  Button › Primary 
+    → [==                  ] 2/18  Button › Secondary 
+    → [====                ] 4/18  Button › Small 
+    → [=======             ] 6/18 (1 component error)  Input › Large 
+    → [========            ] 7/18 (2 component errors)  Input › Number 
+    → [===========         ] 10/18 (2 component errors)  Header › Logged Out 
+    → [============        ] 11/18 (2 component errors)  Input › Medium 
+    → [================    ] 14/18 (3 component errors)  Page › Logged Out 
+    → [=================== ] 17/18 (4 component errors)  Select › Large 
+    → [====================] 18/18 (4 component errors)  Tabs › Default 
+✖ Encountered 4 build errors: failing with exit code 2
+Pass --allow-console-errors to succeed this command regardless of runtime build errors.
+ℹ Review the errors at https://www.chromatic.com/build?appId=6548cf222cb82a0237bc844b&number=1

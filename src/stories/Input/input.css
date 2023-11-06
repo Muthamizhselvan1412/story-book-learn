@@ -1,0 +1,22 @@
+.input{
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding:5px;
+}
+.medium{
+    width : 15rem;    
+}
+.large{
+    width:22rem;
+}
+.extraLarge{
+    width: 25rem;
+}
+.error{
+    border: 1px solid red !important;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
