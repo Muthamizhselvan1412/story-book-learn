@@ -5,6 +5,7 @@ import { Select } from './Components/Components';
 export default {
   title: 'Components/Select',
   component: Select,
+  tags: ['autodocs'],
   decorators:  [(Story) => <div className='center'><Story/></div>],
 };
 

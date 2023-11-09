@@ -1,11 +1,24 @@
 import { Button } from "../src/stories/Button.jsx";
-import Header from '../src/stories/Header.jsx'
-import {Input,Select} from '../src/stories/Components/Components.jsx'
+import Header from "../src/stories/Header.jsx"
+import {Input,Select} from "../src/stories/Components/Components.jsx"
+import {SecondaryButton,Card,Tabs,TabList} from '@workday/canvas-kit-react';
+import {Modal, useModalModel} from '@workday/canvas-kit-react/modal';
+import {DeleteButton, PrimaryButton} from '@workday/canvas-kit-react/button';
+import {Popup,useCloseOnOutsideClick,useCloseOnEscape,usePopupModel} from '@workday/canvas-kit-react/popup';
+import {Flex} from '@workday/canvas-kit-react/layout';
+
+
 function App() {
+
   const gender=[{name:'Male',value:'male'},{name:'Female',value:'female'},{name:'Other',value:"other"}]
   return (
     <div className="text-center text-[30px] bg-gray-200 h-screen">
+    
       <Header />
+      <Tabs varient="default" default="Tab">
+        
+        </Tabs>
+      <Card varient={'With Heading'}>
       <div className="border-2 border-green-300 mx-auto w-fit shadow-xl z-10 mt-[3rem] p-3 rounded-lg bg-gray-100">
         <div className="py-1">
         <p class="text-red-600 text-[25px] mb-6">Practice Form </p>
@@ -15,11 +28,29 @@ function App() {
         <Input size="medium" type="number" label="Phone" name="phone" placeholder="Enter the Phonenumber"/>
         <Select size="medium" label="Gender" options={gender}/>
         </div>
-        <Button primary={true} label="Submit" size="small"/>
+        {/* <Button primary={true} label="Submit" size="small"/> */}
+        {/* <SecondaryButton size="small" >Submit</SecondaryButton> */}
+        <Modal>
+       <Modal.Target as={PrimaryButton} size="small" className="mb-0">Submit</Modal.Target>
+       <Modal.Overlay>
+          <Modal.Card>
+            <Modal.CloseIcon aria-label="Close" />
+            <Modal.Heading>Submit</Modal.Heading>
+            <Modal.Body>
+              <p className="mb-3">Are you sure you want to submit</p>
+              <Flex gap="s">
+                <Modal.CloseButton as={PrimaryButton}>Submit</Modal.CloseButton>
+                <Modal.CloseButton>Cancel</Modal.CloseButton>
+              </Flex>
+            </Modal.Body>
+          </Modal.Card>
+        </Modal.Overlay>
+      </Modal>
         </div>
       </div>
+      </Card>
     </div>
-  );
+   );
 }
 
 export default App;

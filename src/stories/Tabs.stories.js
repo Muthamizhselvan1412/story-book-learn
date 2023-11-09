@@ -5,6 +5,8 @@ import { Tabs } from './Components/Components.jsx';
 export default {
   title: 'Components/Tabs',
   component: Tabs,
+  tags: ['autodocs'],
+
 };
 
 const Template = (args) => <Tabs {...args} />;

@@ -5,10 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: white; */
-  box-shadow: 3px 3px #888888;
-  background-blend-mode: lighten;
-  width: 100%;
 }
 
 .storybook-header svg {

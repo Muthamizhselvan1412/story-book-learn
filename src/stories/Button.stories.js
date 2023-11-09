@@ -7,6 +7,17 @@ export default {
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'centered',
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/aYjMYCE39yIT0GkvVq6Esi/Kalyan-CRM?type=design&node-id=0-1&mode=design&t=muf4alAYYgOmYNL1-0',
+    },
+  },
+  refs: {
+    'design-system': {
+      title: 'Storybook Design System',
+      url: 'https://6548cf222cb82a0237bc844b-oxlmmulhnq.chromatic.com/',
+      expanded: false, // Optional, true by default
+    }
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],

@@ -5,6 +5,7 @@ export default{
     title:'Example/Input',
     component: Input,
     decorators:  [(Story) => <div className='center'><Story/></div>],
+    tags: ['autodocs'],
     parameters: {
         backgrounds: {
           values: [
