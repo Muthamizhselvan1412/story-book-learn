@@ -14,6 +14,11 @@ export default{
             { name: 'blue', value: '#00f' },
           ],
         },
+        github: {
+          baseURL: "https://github.com/Muthamizhselvan1412/tamil-hacks",
+          repository: "tamil-hacks",
+          branch: "main",
+        }
       },
       options: {
         showPanel: true,

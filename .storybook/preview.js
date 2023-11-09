@@ -1,4 +1,5 @@
 /** @type { import('@storybook/react').Preview } */
+import '../src/index.css'
 const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -6,6 +7,13 @@ const preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
+      },
+      parameters: {
+        github: {
+          baseURL: "https://github.com/Muthamizhselvan1412/tamil-hacks",
+          repository: "tamil-hacks",
+          branch: "main",
+        }
       },
     },
   },
